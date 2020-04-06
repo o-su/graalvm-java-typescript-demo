@@ -1,0 +1,40 @@
+{
+    "name": "graalvm-java-typescript-demo",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Polyglot Java, TypeScript demo application running on GraalVM.",
+    "author": "o-su",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/o-su/graalvm-java-typescript-demo.git"
+    },
+    "bugs": {
+        "url": "https://github.com/o-su/graalvm-java-typescript-demo/issues"
+    },
+    "homepage": "https://github.com/o-su/graalvm-java-typescript-demo",
+    "keywords": [
+        "GraalVM",
+        "Java",
+        "TypeScript"
+    ],
+    "files": [
+        "dist"
+    ],
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "npm install && tsc",
+        "start": "%GRAALVM_HOME%/js --jvm --polyglot ./dist/index.js"
+    },
+    "devDependencies": {
+        "typescript": "*",
+        "prettier": "*"
+    },
+    "prettier": {
+        "useTabs": false,
+        "tabWidth": 4,
+        "printWidth": 100,
+        "singleQuote": false
+    }
+}
