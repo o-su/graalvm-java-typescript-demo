@@ -25,7 +25,7 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "npm install && tsc",
-        "start": "%GRAALVM_HOME%/js --jvm --polyglot ./dist/index.js"
+        "start": "npm run build && %GRAALVM_HOME%/js --jvm --experimental-options --js.nashorn-compat=true --polyglot ./dist/index.js"
     },
     "devDependencies": {
         "typescript": "*",
